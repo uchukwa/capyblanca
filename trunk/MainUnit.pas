@@ -42,6 +42,7 @@ type
     Edit1: TEdit;
     UpDown2: TUpDown;
     Edit2: TEdit;
+    UpDown3: TUpDown;
 
     Procedure ImpulsiveUrges;
     procedure ImpulsiveThoughtsInRandomOrder;
@@ -106,7 +107,7 @@ begin
 end;
 
 procedure Tform1.FormPaint(Sender:TObject);
-var t,x,y,x1,x2, PieceRolescount:integer; s:string; p:tsquare; sq:^tsquare;
+var t,x,y,x1,x2,code, PieceRolescount:integer; s, s1:string; p:tsquare; sq:^tsquare;
     TABS:TParamabstractRole; Piece1:tpiece; {NewCanvas:^Tcanvas; Rect:Trect;}
 begin
 {      new (newcanvas);
@@ -121,10 +122,11 @@ begin
       p.y:=1;
       if (workingmemory.pieces.count>0) then
       begin
-      x:=(edit2.text);
+      {str (}
+      val(edit2.text,x,code);
       Piece1:= workingmemory.pieces.items[x-1];
       for x:= 1 to 8 do
-         for y:= 1 to 8 do                             
+         for y:= 1 to 8 do
          begin
               str(Piece1.Mobility[x,y].distance,s);
               stringGrid1.Cells[x-1,y-1]:=S;
@@ -458,7 +460,7 @@ end;
 
 
 procedure TForm1.PlayClick(Sender: TObject);
-var s:string;
+var s:string; x, code:integer;
 begin
      if not(workingmemory.alreadythinking) then
      begin
@@ -469,7 +471,8 @@ begin
      If not (workingmemory.alreadythinking) then StartCognition;
 
      {transfering control to main loop:}
-     SomeImpulsiveThoughtsByUrgency(edit1.text);
+     val (edit1.Text,x,code);
+     SomeImpulsiveThoughtsByUrgency(x);
 end;
 
 
@@ -530,7 +533,7 @@ end;
 
 procedure TForm1.Button4Click(Sender: TObject);
 begin
-     edit1.text:=0;
+     edit1.text:='0';
      Playclick(self);
 end;
 
@@ -540,9 +543,11 @@ begin
 end;
 
 procedure TForm1.SpinEdit2Change(Sender: TObject);
+var x,code: integer;
 begin
-     if (edit2.text-1>=workingmemory.pieces.count) then
-        edit2.text:=1;
+     val (Edit2.text, x, code);
+     if (x-1>=workingmemory.pieces.count) then
+        edit2.text:='1';
      form1.FormPaint(self);
 end;
 

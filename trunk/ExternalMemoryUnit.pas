@@ -597,10 +597,10 @@ begin
 end;
 
 Procedure tpiece.liberate_from_role (destsquare1:ptsquare; pmemo: tmemo);
-var y:integer; TABS:^TParamAbstractRole;
+var y:integer; TABS:TParamAbstractRole;
 begin
      y:=GetIndexParamAbstractRoles(destsquare1^);
-     TABS^:=AbstractRoles.Items[y];
+     TABS:=AbstractRoles.Items[y];
      TABS.intensity:=1{TABS.intensity div 100};
      AbstractRoles.Delete(y);
      pmemo.lines.add('   -->'+fullid+ ' is free from its job on '+convertsquare(destsquare1^.x, destsquare1^.y));

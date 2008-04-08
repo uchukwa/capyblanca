@@ -666,11 +666,6 @@ Dockable=1
 StayOnTop=0
 SplitPos=95
 
-[PropInspDesignerSelection]
-ArrangeBy=Category
-SelectedItem=Miscellaneous.Tag,
-ExpandedItems=Action=1,"Drag, Drop and Docking=1","Help and Hints=1",Input=1,Layout=1,Legacy=1,Linkage=1,Locale=1,Localizable=1,Miscellaneous=1,Visual=1,Layout.Anchors=0,Layout.Constraints=0,Layout.Margins=0,Database=0,Miscellaneous.Options=0,Miscellaneous.OptionsEx=0,Localizable.Constraints=0,Layout.Padding=0,Linkage.Associate=0,Localizable.Font=0,Visual.BevelEdges=0,Visual.Font=0
-
 [BreakpointWindow]
 PercentageSizes=1
 Create=1
