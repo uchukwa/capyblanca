@@ -119,8 +119,8 @@
 			<Linker Name="ExeDescription"></Linker>
 		</Linker>
 		<Directories>
-			<Directories Name="OutputDir">C:\Programs\MyExcutables</Directories>
-			<Directories Name="UnitOutputDir">C:\Programs\MyExcutables</Directories>
+			<Directories Name="OutputDir">C:\Programs\MyExecutables</Directories>
+			<Directories Name="UnitOutputDir">C:\Programs\MyExecutables</Directories>
 			<Directories Name="PackageDLLOutputDir"></Directories>
 			<Directories Name="PackageDCPOutputDir"></Directories>
 			<Directories Name="SearchPath">$(DELPHI)\Lib\Debug</Directories>
