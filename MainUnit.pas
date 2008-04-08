@@ -4,7 +4,7 @@ interface
 
 uses
   AbstractImpulses, ExternalMemoryUnit, Workingmemoryunit, ImpulseSquareAndPiece,BasicImpulse,
-  BoardViewerUnit, StdCtrls, Controls, ExtCtrls, ComCtrls, Classes, Windows, Messages, SysUtils,
+  StdCtrls, Controls, ExtCtrls, ComCtrls, Classes, Windows, Messages, SysUtils,
   Graphics, Forms, Dialogs, types, Grids, SpecialFunctions, Buttons, Spin, SlipnetUnit;
 
 type
@@ -81,6 +81,8 @@ var
   boardloader:Tboardloader;
 
 implementation
+
+uses BoardViewerUnit;
 {$R *.DFM}
 
 
