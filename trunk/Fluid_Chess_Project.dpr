@@ -12,8 +12,7 @@ uses
   SpecialFunctions in 'SpecialFunctions.pas',
   SlipnetUnit in 'SlipnetUnit.pas',
   AssociationUnit in 'AssociationUnit.pas',
-  ImpulseConsiderations in 'ImpulseConsiderations.pas',
-  BoardViewerUnit in 'BoardViewerUnit.pas' {BoardViewerWindow};
+  ImpulseConsiderations in 'ImpulseConsiderations.pas';
 
 {$R *.RES}
 
@@ -22,5 +21,6 @@ begin
   Application.Title := 'Capyblanca';
   {Application.CreateForm(TBoardViewerWindow, BoardViewerWindow);}
   Application.CreateForm(TForm1, Form1);
+  {Application.CreateForm(TBoardViewerWindow, BoardViewerWindow);}
   Application.Run;
 end.

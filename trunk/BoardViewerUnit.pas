@@ -7,7 +7,7 @@ uses
   ExtCtrls, Buttons, StdCtrls;
 
 
-Const BoardSize=400;
+Const BoardSize=400;   
                           
 type
 
