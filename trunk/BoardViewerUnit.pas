@@ -8,7 +8,7 @@ uses
 
 
 Const BoardSize=400;
-
+                          
 type
 
   TBoardViewerWindow = class(TForm)
