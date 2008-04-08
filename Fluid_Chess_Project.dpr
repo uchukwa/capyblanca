@@ -12,13 +12,15 @@ uses
   SpecialFunctions in 'SpecialFunctions.pas',
   SlipnetUnit in 'SlipnetUnit.pas',
   AssociationUnit in 'AssociationUnit.pas',
-  ImpulseConsiderations in 'ImpulseConsiderations.pas';
+  ImpulseConsiderations in 'ImpulseConsiderations.pas',
+  BoardViewerUnit in 'BoardViewerUnit.pas' {BoardViewerWindow};
 
 {$R *.RES}
 
 begin
   Application.Initialize;
   Application.Title := 'Capyblanca';
+  {Application.CreateForm(TBoardViewerWindow, BoardViewerWindow);}
   Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.
